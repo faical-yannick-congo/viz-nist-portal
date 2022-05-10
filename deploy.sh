@@ -4,8 +4,10 @@ set -e
 
 # build
 git clone --branch gh-pages "https://${BOT_USER}:${BOT_TOKEN}@github.com/usnistgov/viz-nist-portal.git" /tmp/dist
+
+echo "Checking out gh-pages."
 cd /tmp/dist
-git checkout gh-pages
+git checkout origin gh-pages
 cd /viz-nist-portal
 
 
