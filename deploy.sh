@@ -10,7 +10,7 @@ yarn run build
 # navigate into the build output directory
 cp -r dist/* /tmp/dist/
 # if you are deploying to a custom domain
-# echo 'www.example.com' > CNAME
+# echo 'viz.nist.gov' > CNAME
 cd /tmp/dist
 git add -A
 git commit -m "deployed at ${DATA_TIMESTAMP}"
