@@ -4,6 +4,10 @@ set -e
 
 # build
 git clone --branch gh-pages "https://${BOT_USER}:${BOT_TOKEN}@github.com/usnistgov/viz-nist-portal.git" /tmp/dist
+cd /tmp/dist
+git checkout gh-pages
+cd /viz-nist-portal
+
 
 npm install -g @vue/cli
 yarn run build
@@ -11,6 +15,7 @@ yarn run build
 cp -r dist/* /tmp/dist/
 # if you are deploying to a custom domain
 # echo 'viz.nist.gov' > CNAME
+
 cd /tmp/dist
 git add -A
 git commit -m "deployed at ${DATA_TIMESTAMP}"
