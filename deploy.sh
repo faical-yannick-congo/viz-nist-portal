@@ -14,5 +14,5 @@ cp -r dist/* /tmp/dist/
 cd /tmp/dist
 git add -A
 git commit -m "deployed at ${DATA_TIMESTAMP}"
-git push -f origin master:gh-pages
+git push -f origin gh-pages
 cd -
