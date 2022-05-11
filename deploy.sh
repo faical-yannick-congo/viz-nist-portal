@@ -7,7 +7,8 @@ git clone --branch gh-pages "https://${BOT_USER}:${BOT_TOKEN}@github.com/usnistg
 
 echo "Checking out gh-pages."
 cd /tmp/dist
-git checkout origin gh-pages
+git fetch origin gh-pages
+git checkout gh-pages
 cd /viz-nist-portal
 
 
@@ -19,7 +20,7 @@ cp -r dist/* /tmp/dist/
 # echo 'viz.nist.gov' > CNAME
 
 cd /tmp/dist
-git add -A
+git add --all
 git commit -m "deployed at ${DATA_TIMESTAMP}"
 git push origin gh-pages
 cd -
